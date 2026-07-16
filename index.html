@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shah Productions | Luxury Cinematic Photography & Film Production Studio</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Shah Productions is an ultra-premium, luxury photography, cinematography, and film production studio based in Chandigarh, serving PAN India. Capturing stories, creating cinematic experiences.">
+  <meta name="keywords" content="Photography in Chandigarh, Best Photographer in Chandigarh, Wedding Photographer, Wedding Cinematographer, Commercial Photography, Professional Video Editor, Film Production Company, Corporate Photography, Photography Services India, Drone Photography, Short Film Production, Creative Studio India">
+  <meta name="author" content="Daksh Shah">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shahproductions.in/">
+  <meta property="og:title" content="Shah Productions | Luxury Cinematic Photography & Film Production">
+  <meta property="og:description" content="Capture your stories with an award-winning cinematic photography & film production studio in Chandigarh, serving PAN India.">
+  <meta property="og:image" content="images/wedding_portfolio.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://shahproductions.in/">
+  <meta property="twitter:title" content="Shah Productions | Luxury Cinematic Photography & Film Production">
+  <meta property="twitter:description" content="Capture your stories with an award-winning cinematic photography & film production studio in Chandigarh, serving PAN India.">
+  <meta property="twitter:image" content="images/wedding_portfolio.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            luxuryBg: '#0B0B0B', /* Deep Obsidian Black */
+            luxuryBgAlt: '#090909',
+            luxuryFooterBg: '#050505',
+            luxuryGold: '#D4AF37', /* Rich Metallic Gold */
+            luxuryGoldHover: '#F3E5AB',
+            luxuryGlass: 'rgba(255, 255, 255, 0.03)',
+            luxuryGlassBorder: 'rgba(255, 255, 255, 0.08)',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            poppins: ['Poppins', 'sans-serif'],
+          },
+          letterSpacing: {
+            widestLogo: '0.3em',
+            widestHeader: '0.15em',
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-luxuryBg text-white selection:bg-luxuryGold selection:text-black">
+
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
+
+  <!-- Custom Cursor Followers -->
+  <div id="cursor" class="custom-cursor hidden md:block"></div>
+  <div id="cursor-follower" class="custom-cursor-follower hidden md:block"></div>
+
+  <!-- Preloader / Cinematic Loading Screen -->
+  <div id="preloader" class="preloader">
+    <div class="loader-logo tracking-widestLogo text-luxuryGold font-bold">SHAH</div>
+    <div class="loader-progress-bg">
+      <div id="loader-progress" class="loader-progress-bar"></div>
+    </div>
+    <div id="loader-percent" class="loader-counter">0%</div>
+  </div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="fixed top-0 left-0 w-full h-[3px] bg-white/5 z-[999]">
+    <div id="scroll-progress" class="h-full bg-luxuryGold w-0 transition-all duration-75"></div>
+  </div>
+
+  <!-- Sticky Glass Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-6 lg:px-16 border-b border-transparent backdrop-blur-none">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex flex-col select-none magnetic-btn group cursor-pointer">
+        <span class="font-cinzel text-xl lg:text-2xl font-bold tracking-widestLogo text-luxuryGold transition-all duration-300 group-hover:text-white">SHAH</span>
+        <span class="font-poppins text-[8px] tracking-[0.55em] text-white/60 -mt-1 group-hover:text-luxuryGold transition-all duration-300">PRODUCTIONS</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="hidden md:flex items-center space-x-8 lg:space-x-12 font-cinzel text-xs tracking-widestHeader">
+        <a href="#about" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          About
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#services" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          Services
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#portfolio" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          Portfolio
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#showreel" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          Showreel
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#testimonials" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          Clients
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact" class="nav-link text-white/70 hover:text-luxuryGold transition-colors duration-300 py-2 relative group">
+          Contact
+          <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-luxuryGold transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
+
+      <!-- CTA Book Shoot Button -->
+      <div class="hidden md:block">
+        <a href="#contact" class="magnetic-btn border border-luxuryGold/40 hover:border-luxuryGold text-white hover:text-black bg-transparent hover:bg-luxuryGold px-6 py-2.5 rounded-full font-cinzel text-xs tracking-widestHeader transition-all duration-500 shadow-lg shadow-luxuryGold/5 hover:shadow-luxuryGold/20">
+          Book Shoot
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-between w-6 h-4 z-50 relative focus:outline-none">
+        <span class="w-full h-[1.5px] bg-white transition-all duration-300 origin-left"></span>
+        <span class="w-3/4 h-[1.5px] bg-white transition-all duration-300 self-end"></span>
+        <span class="w-full h-[1.5px] bg-white transition-all duration-300 origin-left"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="fixed top-0 left-0 w-full h-screen bg-luxuryBg/95 backdrop-blur-xl flex flex-col justify-center items-center space-y-8 font-cinzel text-lg tracking-widestHeader transition-all duration-500 translate-y-[-100%] z-40">
+      <a href="#about" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">About</a>
+      <a href="#services" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">Services</a>
+      <a href="#portfolio" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">Portfolio</a>
+      <a href="#showreel" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">Showreel</a>
+      <a href="#testimonials" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">Clients</a>
+      <a href="#contact" class="mobile-nav-link text-white hover:text-luxuryGold transition-colors">Contact</a>
+      <a href="#contact" class="border border-luxuryGold text-luxuryGold hover:bg-luxuryGold hover:text-black px-8 py-3 rounded-full text-sm font-semibold transition-all duration-300">
+        Book Shoot
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative w-full h-screen flex flex-col justify-center items-center overflow-hidden">
+    
+    <!-- Background Video -->
+    <div class="absolute inset-0 z-0">
+      <video class="w-full h-full object-cover brightness-[0.35]" autoplay loop muted playsinline>
+        <source src="https://player.vimeo.com/external/435674703.sd.mp4?s=7f5df5f1d4f24efb4a62174d8175e1136b755695&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+
+    <!-- Interactive Three.js 3D Container -->
+    <div id="canvas3d-container" class="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-1/2 h-[500px] pointer-events-none z-10 opacity-70"></div>
+
+    <!-- Fine particle canvas -->
+    <canvas id="particles-canvas" class="absolute inset-0 pointer-events-none z-10 opacity-70"></canvas>
+
+    <!-- Ambient Gold Glow Backdrops -->
+    <div class="aurora-bg top-[10%] left-[20%]"></div>
+    <div class="aurora-bg bottom-[10%] right-[20%]"></div>
+
+    <!-- Floating Spec Badges (Awwwards Style) -->
+    <div class="hero-floating-card bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-[9px] tracking-widest text-luxuryGold absolute left-12 top-1/4 backdrop-blur-md hidden lg:block z-20">
+      RED V-RAPTOR 8K SENSOR
+    </div>
+    <div class="hero-floating-card bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-[9px] tracking-widest text-luxuryGold absolute right-16 top-[15%] backdrop-blur-md hidden lg:block z-20">
+      ARRI ALEXA MINI LF PRIMES
+    </div>
+    <div class="hero-floating-card bg-white/5 border border-white/10 px-4 py-2 rounded-lg text-[9px] tracking-widest text-luxuryGold absolute left-24 bottom-1/4 backdrop-blur-md hidden lg:block z-20">
+      DAVINCI RESOLVE SUITE
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-20 max-w-6xl mx-auto px-6 text-center flex flex-col items-center justify-center h-full pt-16">
+      
+      <!-- Studio Intro Tag -->
+      <div class="opacity-0 translate-y-10 hero-reveal flex items-center space-x-3 mb-6 bg-white/5 border border-white/10 px-4 py-1.5 rounded-full backdrop-blur-md">
+        <span class="w-2 h-2 rounded-full bg-luxuryGold animate-pulse"></span>
+        <span class="font-poppins text-[10px] uppercase tracking-[0.25em] text-white/80">Premium Production Studio</span>
+      </div>
+
+      <!-- Main Headline (Cinzel) -->
+      <h1 class="opacity-0 translate-y-16 hero-reveal font-cinzel text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-wide text-white leading-[1.1] mb-6 select-none">
+        Capturing Stories.<br>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-luxuryGold via-luxuryGoldHover to-white">Cinematic</span> Experiences.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="opacity-0 translate-y-10 hero-reveal max-w-2xl font-poppins text-xs sm:text-sm md:text-base text-white/60 tracking-wider font-light mb-12">
+        Premium Photography &bull; Cinematography &bull; Film Production &bull; Post Production
+      </p>
+
+      <!-- CTAs -->
+      <div class="opacity-0 translate-y-10 hero-reveal flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6">
+        <a href="#contact" class="magnetic-btn bg-luxuryGold hover:bg-white text-black hover:text-black font-cinzel text-xs tracking-widestHeader px-8 py-4 rounded-full font-bold transition-all duration-500 shadow-xl shadow-luxuryGold/10 hover:shadow-white/20">
+          Book a Shoot
+        </a>
+        <a href="#portfolio" class="magnetic-btn border border-white/20 hover:border-luxuryGold hover:bg-luxuryGold/5 text-white font-cinzel text-xs tracking-widestHeader px-8 py-4 rounded-full transition-all duration-500">
+          View Portfolio
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="absolute bottom-10 left-50 z-20 flex flex-col items-center group cursor-pointer">
+      <span class="font-poppins text-[9px] uppercase tracking-[0.3em] text-white/40 group-hover:text-luxuryGold mb-2 transition-colors">Scroll</span>
+      <div class="scroll-indicator-mouse group-hover:border-luxuryGold transition-colors">
+        <div class="scroll-indicator-wheel"></div>
+      </div>
+    </a>
+
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-24 lg:py-36 px-6 lg:px-16 overflow-hidden border-t border-white/5">
+    
+    <!-- Background glow -->
+    <div class="aurora-bg top-[40%] right-[10%]"></div>
+    <div class="aurora-bg bottom-[20%] left-[5%]"></div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+      
+      <!-- Left: Visual Column -->
+      <div class="relative group">
+        <!-- Golden Frame Border -->
+        <div class="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-luxuryGold"></div>
+        <div class="absolute -bottom-4 -right-4 w-12 h-12 border-b-2 border-r-2 border-luxuryGold"></div>
+        
+        <!-- Large Image Container with Zoom effect -->
+        <div class="relative overflow-hidden rounded-lg shadow-2xl shadow-black/80 aspect-[4/5] border border-white/10 glass-panel">
+          <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=800&auto=format&fit=crop" 
+               alt="Daksh Shah - Founder of Shah Productions" 
+               class="w-full h-full object-cover reveal-img brightness-[0.8]">
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-transparent to-transparent"></div>
+        </div>
+
+        <!-- Overlaid floating detail -->
+        <div class="absolute bottom-6 left-6 right-6 p-6 glass-panel border border-white/10 rounded-lg flex items-center justify-between">
+          <div>
+            <h4 class="font-cinzel text-sm text-luxuryGold font-bold tracking-widestHeader">Daksh Shah</h4>
+            <p class="font-poppins text-[10px] text-white/50 tracking-wider">Founder & Lead Cinematographer</p>
+          </div>
+          <div class="flex items-center space-x-2 text-luxuryGold text-xs">
+            <i class="fa-solid fa-camera"></i>
+            <span class="font-cinzel text-[10px] tracking-wider">CHANDIGARH, IN</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Content Column -->
+      <div class="flex flex-col justify-center">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4 flex items-center">
+          <span class="w-8 h-[1px] bg-luxuryGold mr-3"></span> The Visionary Behind the Lens
+        </h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white leading-tight mb-8">
+          Crafting Legacies through Light & Time.
+        </h2>
+        <p class="font-poppins text-sm md:text-base text-white/70 leading-relaxed font-light mb-8">
+          Based in Chandigarh and capturing stories across PAN India, **Shah Productions** is defined by an unwavering dedication to cinematic luxury. Founded by Daksh Shah, we reject the ordinary to create imagery that is striking, immersive, and emotional.
+        </p>
+        <p class="font-poppins text-sm text-white/60 leading-relaxed font-light mb-12">
+          From high-fashion sets and premium destination weddings to cinematic commercial campaigns and cutting-edge post-production, we combine master artistry with top-tier technology (Red, Arri, advanced drones, AI-enhanced edits) to craft your visual legacy.
+        </p>
+
+        <!-- Stats Counters Grid -->
+        <div class="grid grid-cols-2 gap-8 border-t border-white/10 pt-10">
+          <div>
+            <span class="font-cinzel text-3xl sm:text-4xl font-extrabold text-luxuryGold flex items-center">
+              <span class="counter" data-target="250">0</span>+
+            </span>
+            <p class="font-poppins text-[10px] uppercase tracking-widestHeader text-white/40 mt-2">Projects Completed</p>
+          </div>
+          <div>
+            <span class="font-cinzel text-3xl sm:text-4xl font-extrabold text-luxuryGold flex items-center">
+              <span class="counter" data-target="180">0</span>+
+            </span>
+            <p class="font-poppins text-[10px] uppercase tracking-widestHeader text-white/40 mt-2">Happy Clients</p>
+          </div>
+          <div>
+            <span class="font-cinzel text-3xl sm:text-4xl font-extrabold text-luxuryGold flex items-center">
+              <span class="counter" data-target="8">0</span>+
+            </span>
+            <p class="font-poppins text-[10px] uppercase tracking-widestHeader text-white/40 mt-2">Years Experience</p>
+          </div>
+          <div>
+            <span class="font-cinzel text-3xl sm:text-4xl font-extrabold text-luxuryGold flex items-center">
+              <span class="counter" data-target="30">0</span>+
+            </span>
+            <p class="font-poppins text-[10px] uppercase tracking-widestHeader text-white/40 mt-2">Cities Covered</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Timeline Wrapper -->
+    <div class="max-w-5xl mx-auto mt-28 lg:mt-40">
+      <h3 class="font-cinzel text-xl text-center text-white font-bold tracking-widestLogo mb-16">Studio Milestones</h3>
+      
+      <div class="relative">
+        <!-- Timeline central vertical line -->
+        <div class="timeline-line"></div>
+        
+        <!-- Timeline Item 1 -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between mb-16 group">
+          <div class="timeline-dot"></div>
+          <div class="w-full md:w-[45%] text-left md:text-right pr-0 md:pr-10 pl-10 md:pl-0">
+            <span class="font-cinzel text-luxuryGold font-extrabold text-lg">2018</span>
+            <h4 class="font-cinzel text-sm text-white font-bold tracking-wide mt-1">Studio Inception</h4>
+            <p class="font-poppins text-xs text-white/60 mt-2">Daksh Shah establishes the studio in Chandigarh, focused on cinematic lifestyle and commercial photography.</p>
+          </div>
+          <div class="hidden md:block w-[10%]"></div>
+          <div class="w-full md:w-[45%] pl-10 md:pl-10 mt-4 md:mt-0">
+            <div class="glass-panel border border-white/5 rounded-lg overflow-hidden h-28 aspect-video">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 -->
+        <div class="relative flex flex-col md:flex-row-reverse items-center justify-between mb-16 group">
+          <div class="timeline-dot"></div>
+          <div class="w-full md:w-[45%] text-left pl-10">
+            <span class="font-cinzel text-luxuryGold font-extrabold text-lg">2021</span>
+            <h4 class="font-cinzel text-sm text-white font-bold tracking-wide mt-1">PAN India Expansion</h4>
+            <p class="font-poppins text-xs text-white/60 mt-2">Transitioned into luxury destination wedding films and drone cinematography across Goa, Rajasthan, and Himachal Pradesh.</p>
+          </div>
+          <div class="hidden md:block w-[10%]"></div>
+          <div class="w-full md:w-[45%] pr-0 md:pr-10 pl-10 md:pl-0 mt-4 md:mt-0">
+            <div class="glass-panel border border-white/5 rounded-lg overflow-hidden h-28 aspect-video">
+              <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="relative flex flex-col md:flex-row items-center justify-between group">
+          <div class="timeline-dot"></div>
+          <div class="w-full md:w-[45%] text-left md:text-right pr-0 md:pr-10 pl-10 md:pl-0">
+            <span class="font-cinzel text-luxuryGold font-extrabold text-lg">2025</span>
+            <h4 class="font-cinzel text-sm text-white font-bold tracking-wide mt-1">High-End Post-Production</h4>
+            <p class="font-poppins text-xs text-white/60 mt-2">Incorporated state-of-the-art DaVinci Resolve color grading suits, motion graphics studio, and custom AI video enhancements.</p>
+          </div>
+          <div class="hidden md:block w-[10%]"></div>
+          <div class="w-full md:w-[45%] pl-10 md:pl-10 mt-4 md:mt-0">
+            <div class="glass-panel border border-white/5 rounded-lg overflow-hidden h-28 aspect-video">
+              <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=300&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-[0.7] group-hover:scale-105 transition-transform duration-500">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Services Section -->
+  <section id="services" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-[#090909] border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[10%] left-[5%]"></div>
+    <div class="aurora-bg bottom-[10%] right-[5%]"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-20">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Our Expertise</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white">Luxury Creative Services</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mx-auto mt-6"></div>
+      </div>
+
+      <!-- Services Category Selector tabs -->
+      <div class="flex flex-wrap justify-center gap-4 mb-16 font-cinzel text-xs tracking-widestHeader">
+        <button class="service-tab-btn active px-6 py-2.5 rounded-full border border-luxuryGold text-black bg-luxuryGold transition-all duration-300" onclick="filterServices('all')">All Services</button>
+        <button class="service-tab-btn px-6 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterServices('photography')">Photography</button>
+        <button class="service-tab-btn px-6 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterServices('cinematography')">Cinematography</button>
+        <button class="service-tab-btn px-6 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterServices('commercial')">Commercial</button>
+        <button class="service-tab-btn px-6 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterServices('editing')">Post Production</button>
+      </div>
+
+      <!-- Services Cards Grid -->
+      <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 tilt-card-container">
+        
+        <!-- Wedding Photography Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="photography">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-camera-retro"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Wedding & Portrait</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              Wedding, Pre-Wedding, Engagement, and Portrait shoots. Capturing raw intimacy in luxury formats with custom light framing and elegant cinematic editing.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Wedding &bull; Portraits</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Wedding Cinematic Films Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="cinematography">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Cinematic Wedding Films</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              Crafting movie-scale wedding teasers, trailers, and full documentary films. Shot on commercial-grade cinema systems with customized lighting direction.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Cinematography</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Fashion & Lifestyle Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="photography">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Fashion & Lifestyle</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              High-concept fashion lookbooks, modeling portfolios, lifestyle shoots, and creative brand photography. Emphasizing dramatic highlights and texture.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Fashion &bull; Portraits</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Commercial Ads & Corporate Films Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="commercial">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-film"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Commercial Ads & Brands</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              Brand campaign films, product launches, hospitality showcases (hotels, restaurants), corporate profile films, and premium real estate architectural shoots.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Commercial</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Drone Cinematography Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="cinematography">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-helicopter"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Drone & Aerial Shoots</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              High-definition 4K aerial photography and cinematography. Stunning drone coverage for music videos, luxury events, real estate, and short films.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Aerial &bull; Drone</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+        <!-- Post Production & Grading Card -->
+        <div class="service-card glass-panel p-8 flex flex-col justify-between h-[380px] tilt-card group" data-category="editing">
+          <div class="tilt-card-inner">
+            <div class="w-12 h-12 flex items-center justify-center border border-luxuryGold/30 rounded-full mb-8 text-luxuryGold text-lg group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <h3 class="font-cinzel text-lg font-bold text-white tracking-widestHeader mb-4 group-hover:text-luxuryGold transition-colors">Post Production & Grading</h3>
+            <p class="font-poppins text-xs text-white/50 leading-relaxed font-light">
+              DaVinci Resolve color grading, professional video editing (reels, YouTube, brand ads), motion graphics, sound design, visual effects, and AI video enhancement.
+            </p>
+          </div>
+          <div class="flex items-center justify-between border-t border-white/5 pt-6 mt-4">
+            <span class="font-poppins text-[10px] text-white/30 uppercase tracking-widestHeader">Editing &bull; Grading</span>
+            <a href="#contact" class="text-luxuryGold hover:text-white transition-colors text-xs font-cinzel tracking-widestHeader">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-luxuryBg border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[20%] right-[5%]"></div>
+    <div class="aurora-bg bottom-[30%] left-[10%]"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-20 flex flex-col items-center">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Visual Masterpieces</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white">Cinematic Portfolio</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mt-6"></div>
+      </div>
+
+      <!-- Portfolio Filters -->
+      <div class="flex flex-wrap justify-center gap-3 mb-16 font-cinzel text-[10px] md:text-xs tracking-widestHeader">
+        <button class="portfolio-filter-btn active px-5 py-2.5 rounded-full border border-luxuryGold text-black bg-luxuryGold transition-all duration-300" onclick="filterPortfolio('all')">ALL WORKS</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('wedding')">WEDDING</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('portrait')">PORTRAITS</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('fashion')">FASHION</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('corporate')">CORPORATE</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('commercial')">COMMERCIAL</button>
+        <button class="portfolio-filter-btn px-5 py-2.5 rounded-full border border-white/10 text-white hover:border-luxuryGold hover:bg-luxuryGold/5 transition-all duration-300" onclick="filterPortfolio('films')">FILMS</button>
+      </div>
+
+      <!-- Portfolio Luxury Masonry Grid -->
+      <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Portfolio Item 1 (Wedding) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="wedding">
+          <img src="images/wedding_portfolio.png" alt="Luxury Wedding Couple" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">WEDDING PORTFOLIO</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">Sacred Vows in Gold</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">Captured in Chandigarh &bull; Daksh Shah</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 2 (Portrait) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="portrait">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop" alt="Cinematic Portrait" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">PORTRAIT SHOWCASE</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">Whispers of the Soul</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">Studio Session &bull; Cinematic Lighting</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 3 (Fashion) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="fashion">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop" alt="Fashion Shoot" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">FASHION & EDITORIAL</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">Gilded Modernism</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">High-Fashion Editorial &bull; Delhi</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 4 (Corporate) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="corporate">
+          <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop" alt="Corporate Event" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">CORPORATE PROFILE</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">Architects of Tech</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">Brand Campaign &bull; PAN India</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 5 (Commercial) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="commercial">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="Commercial Shoot" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">COMMERCIAL SHOWCASE</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">The Obsidian Skyscraper</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">Real Estate Campaign &bull; Mumbai</p>
+          </div>
+        </div>
+
+        <!-- Portfolio Item 6 (Films) -->
+        <div class="portfolio-item relative overflow-hidden rounded-lg group border border-white/5 aspect-[3/4]" data-category="films">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=800&auto=format&fit=crop" alt="Behind the Scenes Film Shoot" class="w-full h-full object-cover reveal-img brightness-[0.8] group-hover:scale-105 transition-transform duration-1000">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+            <span class="font-cinzel text-xs text-luxuryGold tracking-widestHeader mb-1">FILM PRODUCTION</span>
+            <h4 class="font-cinzel text-lg font-bold text-white tracking-wide">Under the Spotlight</h4>
+            <p class="font-poppins text-[10px] text-white/60 mt-1">Behind The Scenes &bull; Music Video</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Showreel Section -->
+  <section id="showreel" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-[#090909] border-t border-white/5">
+    
+    <!-- Background glow -->
+    <div class="aurora-bg top-[30%] left-[30%]"></div>
+
+    <div class="max-w-6xl mx-auto flex flex-col items-center">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-16">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Director's Cut</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white">Cinematic Showreel</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mx-auto mt-6"></div>
+      </div>
+
+      <!-- Video Player Frame -->
+      <div class="relative w-full aspect-video rounded-xl overflow-hidden glass-panel border border-luxuryGold/30 player-glow group">
+        
+        <!-- Video Element -->
+        <video id="main-showreel-video" class="w-full h-full object-cover" preload="metadata" loop controls>
+          <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c02cba73d1e3efd5bd6b04e6c986927a&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Custom Overlay Poster -->
+        <div id="video-poster" class="absolute inset-0 bg-cover bg-center flex flex-col justify-center items-center cursor-pointer transition-opacity duration-700 z-10" style="background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1200&auto=format&fit=crop');">
+          <!-- Pulse Play button -->
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-full border border-luxuryGold bg-[#0B0B0B]/80 flex items-center justify-center text-luxuryGold text-2xl md:text-3xl transition-transform duration-500 group-hover:scale-110 shadow-2xl shadow-luxuryGold/20">
+            <i class="fa-solid fa-play ml-1"></i>
+          </div>
+          <span class="font-cinzel text-xs tracking-widestHeader mt-6 text-white group-hover:text-luxuryGold transition-colors">WATCH SHOWREEL</span>
+        </div>
+
+      </div>
+
+      <!-- Quick Showreel Stats -->
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center border-t border-white/5 pt-10">
+        <div>
+          <h5 class="font-cinzel text-[10px] text-white/50 tracking-widestHeader">Directed By</h5>
+          <p class="font-cinzel text-sm text-luxuryGold font-bold mt-1">Daksh Shah</p>
+        </div>
+        <div>
+          <h5 class="font-cinzel text-[10px] text-white/50 tracking-widestHeader">Shot On</h5>
+          <p class="font-cinzel text-sm text-luxuryGold font-bold mt-1">RED V-Raptor &bull; ARRI Alexa</p>
+        </div>
+        <div>
+          <h5 class="font-cinzel text-[10px] text-white/50 tracking-widestHeader">Locations</h5>
+          <p class="font-cinzel text-sm text-luxuryGold font-bold mt-1">PAN India Coverage</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-luxuryBg border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[10%] right-[10%]"></div>
+    <div class="aurora-bg bottom-[10%] left-[5%]"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-20">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Elite Clients</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white">Client Testimonials</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mx-auto mt-6"></div>
+      </div>
+
+      <!-- Swiper Slider Container -->
+      <div class="swiper testimonials-slider py-8 px-4 max-w-5xl mx-auto">
+        <div class="swiper-wrapper">
+          
+          <!-- Testimonial 1 -->
+          <div class="swiper-slide glass-panel p-8 md:p-12 border border-white/5 rounded-xl flex flex-col justify-between h-[300px]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex space-x-1 text-luxuryGold text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-luxuryGold/20 text-3xl font-serif">“</span>
+              </div>
+              <p class="font-poppins text-xs sm:text-sm text-white/70 italic leading-relaxed font-light mb-6">
+                "Daksh and his team at Shah Productions turned our wedding into an absolute cinematic masterpiece. The attention to color grading and sound design was unlike anything we've seen from standard wedding videographers. Worth every single penny!"
+              </p>
+            </div>
+            <div class="flex items-center space-x-4 border-t border-white/5 pt-6">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover border border-luxuryGold/40">
+              <div>
+                <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Meera & Rahul Sen</h4>
+                <p class="font-poppins text-[9px] text-white/40 uppercase tracking-widestHeader">Destination Wedding &bull; Udaipur</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="swiper-slide glass-panel p-8 md:p-12 border border-white/5 rounded-xl flex flex-col justify-between h-[300px]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex space-x-1 text-luxuryGold text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-luxuryGold/20 text-3xl font-serif">“</span>
+              </div>
+              <p class="font-poppins text-xs sm:text-sm text-white/70 italic leading-relaxed font-light mb-6">
+                "We hired Shah Productions for our high-end real estate brand launch in Chandigarh. The aerial shots and architectural photography captured the premium quality of our project perfectly. Highly professional crew."
+              </p>
+            </div>
+            <div class="flex items-center space-x-4 border-t border-white/5 pt-6">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover border border-luxuryGold/40">
+              <div>
+                <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Karan Malhotra</h4>
+                <p class="font-poppins text-[9px] text-white/40 uppercase tracking-widestHeader">Director &bull; Malhotra Infra</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="swiper-slide glass-panel p-8 md:p-12 border border-white/5 rounded-xl flex flex-col justify-between h-[300px]">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <!-- Stars -->
+                <div class="flex space-x-1 text-luxuryGold text-xs">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <!-- Quote Icon -->
+                <span class="text-luxuryGold/20 text-3xl font-serif">“</span>
+              </div>
+              <p class="font-poppins text-xs sm:text-sm text-white/70 italic leading-relaxed font-light mb-6">
+                "The edits, grading, and post-production flow from this studio is top tier. They delivered our brand commercial campaign well ahead of schedule, with stunning 3D title work. Outstanding artistic direction."
+              </p>
+            </div>
+            <div class="flex items-center space-x-4 border-t border-white/5 pt-6">
+              <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=150&auto=format&fit=crop" class="w-12 h-12 rounded-full object-cover border border-luxuryGold/40">
+              <div>
+                <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Anya Kapur</h4>
+                <p class="font-poppins text-[9px] text-white/40 uppercase tracking-widestHeader">Marketing Lead &bull; Vibe Cosmetics</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Slider Pagination & Navigation -->
+        <div class="swiper-pagination mt-10 !bottom-0"></div>
+        <div class="swiper-button-next !text-luxuryGold !w-8 !h-8 after:!text-sm border border-luxuryGold/30 bg-luxuryBg rounded-full hover:bg-luxuryGold hover:text-black transition-colors duration-300"></div>
+        <div class="swiper-button-prev !text-luxuryGold !w-8 !h-8 after:!text-sm border border-luxuryGold/30 bg-luxuryBg rounded-full hover:bg-luxuryGold hover:text-black transition-colors duration-300"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Why Choose Us & Process Section -->
+  <section id="why-choose-us" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-[#090909] border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[20%] left-[5%]"></div>
+    <div class="aurora-bg bottom-[20%] right-[5%]"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top: Why Choose Us Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center mb-32">
+        <div class="lg:col-span-1">
+          <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Elite Standard</h4>
+          <h2 class="font-cinzel text-3xl sm:text-4xl font-bold tracking-wide text-white leading-tight mb-6">Why Choose Shah Productions?</h2>
+          <p class="font-poppins text-xs sm:text-sm text-white/60 leading-relaxed font-light mb-8">
+            We operate at the intersection of creative brilliance and high-end tech, delivering experiences that capture the true essence of your narrative.
+          </p>
+          <a href="#contact" class="magnetic-btn border border-luxuryGold/40 text-white hover:text-black hover:bg-luxuryGold px-6 py-3 rounded-full font-cinzel text-xs tracking-widestHeader transition-colors">
+            Our Packages
+          </a>
+        </div>
+
+        <!-- Luxury Attributes Grid -->
+        <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <div class="glass-panel p-6 border border-white/5 rounded-lg flex items-start space-x-4 hover:border-luxuryGold/40 transition-colors">
+            <div class="text-luxuryGold text-xl mt-1"><i class="fa-solid fa-users-gear"></i></div>
+            <div>
+              <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Professional Team</h4>
+              <p class="font-poppins text-[11px] text-white/50 mt-2">Award-winning visual directors, cinematographers, and detail-oriented post-editors.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border border-white/5 rounded-lg flex items-start space-x-4 hover:border-luxuryGold/40 transition-colors">
+            <div class="text-luxuryGold text-xl mt-1"><i class="fa-solid fa-camera"></i></div>
+            <div>
+              <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Premium Gear</h4>
+              <p class="font-poppins text-[11px] text-white/50 mt-2">Shooting exclusively with RED Digital Cinema, ARRI systems, DJI Inspire drones, and luxury primes.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border border-white/5 rounded-lg flex items-start space-x-4 hover:border-luxuryGold/40 transition-colors">
+            <div class="text-luxuryGold text-xl mt-1"><i class="fa-solid fa-compass-drafting"></i></div>
+            <div>
+              <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Creative Direction</h4>
+              <p class="font-poppins text-[11px] text-white/50 mt-2">Custom scripting, set lighting plans, and unique storytelling boards prepared for every shoot.</p>
+            </div>
+          </div>
+
+          <div class="glass-panel p-6 border border-white/5 rounded-lg flex items-start space-x-4 hover:border-luxuryGold/40 transition-colors">
+            <div class="text-luxuryGold text-xl mt-1"><i class="fa-solid fa-truck-fast"></i></div>
+            <div>
+              <h4 class="font-cinzel text-xs text-white font-bold tracking-wide">Fast Delivery & PAN India</h4>
+              <p class="font-poppins text-[11px] text-white/50 mt-2">Serving clients across India with a highly streamlined edit pipeline to deliver teasers within days.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Bottom: The Process Timeline -->
+      <div class="border-t border-white/10 pt-24">
+        
+        <div class="text-center mb-16">
+          <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">How We Work</h4>
+          <h2 class="font-cinzel text-2xl sm:text-3xl font-bold tracking-wide text-white">Our Creative Process</h2>
+          <div class="w-16 h-[1px] bg-luxuryGold mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8 relative">
+          
+          <!-- Process Step 1 -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-full border border-luxuryGold/30 bg-luxuryBg flex items-center justify-center text-luxuryGold text-lg font-cinzel font-bold mb-6 group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300 shadow-lg shadow-luxuryGold/5">01</div>
+            <h4 class="font-cinzel text-xs text-white font-bold tracking-wide mb-2">Discovery</h4>
+            <p class="font-poppins text-[10px] text-white/50 leading-relaxed px-4">Initial consultation, detailing themes, moods, expectations, and booking confirmations.</p>
+          </div>
+
+          <!-- Process Step 2 -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-full border border-luxuryGold/30 bg-luxuryBg flex items-center justify-center text-luxuryGold text-lg font-cinzel font-bold mb-6 group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300 shadow-lg shadow-luxuryGold/5">02</div>
+            <h4 class="font-cinzel text-xs text-white font-bold tracking-wide mb-2">Planning</h4>
+            <p class="font-poppins text-[10px] text-white/50 leading-relaxed px-4">Storyboarding, scripting, script briefs, location scouting, and lighting design setups.</p>
+          </div>
+
+          <!-- Process Step 3 -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-full border border-luxuryGold/30 bg-luxuryBg flex items-center justify-center text-luxuryGold text-lg font-cinzel font-bold mb-6 group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300 shadow-lg shadow-luxuryGold/5">03</div>
+            <h4 class="font-cinzel text-xs text-white font-bold tracking-wide mb-2">Shoot</h4>
+            <p class="font-poppins text-[10px] text-white/50 leading-relaxed px-4">Capturing raw footage with cinema setups, high-precision drone runs, and luxury lighting.</p>
+          </div>
+
+          <!-- Process Step 4 -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-full border border-luxuryGold/30 bg-luxuryBg flex items-center justify-center text-luxuryGold text-lg font-cinzel font-bold mb-6 group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300 shadow-lg shadow-luxuryGold/5">04</div>
+            <h4 class="font-cinzel text-xs text-white font-bold tracking-wide mb-2">Editing</h4>
+            <p class="font-poppins text-[10px] text-white/50 leading-relaxed px-4">DaVinci Resolve grading, sound designing, title animations, and detailed rough cuts.</p>
+          </div>
+
+          <!-- Process Step 5 -->
+          <div class="flex flex-col items-center text-center group">
+            <div class="w-16 h-16 rounded-full border border-luxuryGold/30 bg-luxuryBg flex items-center justify-center text-luxuryGold text-lg font-cinzel font-bold mb-6 group-hover:bg-luxuryGold group-hover:text-black transition-colors duration-300 shadow-lg shadow-luxuryGold/5">05</div>
+            <h4 class="font-cinzel text-xs text-white font-bold tracking-wide mb-2">Delivery</h4>
+            <p class="font-poppins text-[10px] text-white/50 leading-relaxed px-4">High-definition final render files delivered securely via our custom digital storage systems.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-luxuryBg border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[30%] right-[10%]"></div>
+
+    <div class="max-w-4xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-20">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Clarifications</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold tracking-wide text-white">Frequently Asked Questions</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mx-auto mt-6"></div>
+      </div>
+
+      <!-- Accordion Grid -->
+      <div class="space-y-4">
+        
+        <!-- Accordion Item 1 -->
+        <div class="faq-item glass-panel border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+          <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-cinzel text-xs sm:text-sm text-white font-bold tracking-wide">Where is Shah Productions based, and do you travel?</span>
+            <span class="faq-icon text-luxuryGold text-xs transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <p class="px-6 pb-5 font-poppins text-xs text-white/60 leading-relaxed">
+              We are proudly headquartered in Chandigarh, India. However, we serve clients PAN India. We regularly capture high-end destination weddings, luxury corporate retreats, and brand shoots in Goa, Jaipur, Mumbai, Delhi, and beyond.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 2 -->
+        <div class="faq-item glass-panel border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+          <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-cinzel text-xs sm:text-sm text-white font-bold tracking-wide">What cameras and equipment do you use?</span>
+            <span class="faq-icon text-luxuryGold text-xs transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <p class="px-6 pb-5 font-poppins text-xs text-white/60 leading-relaxed">
+              We shooting using industry-leading cinema cameras, including RED Digital Cinema systems, ARRI Alexa platforms, DJI Inspire drones for aerial footage, and a curated set of luxury prime lens glass to ensure a shallow, cinematic depth of field.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 3 -->
+        <div class="faq-item glass-panel border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+          <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-cinzel text-xs sm:text-sm text-white font-bold tracking-wide">How long does it take to deliver the final films and photos?</span>
+            <span class="faq-icon text-luxuryGold text-xs transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <p class="px-6 pb-5 font-poppins text-xs text-white/60 leading-relaxed">
+              Quality takes time, but we value your excitement. Wedding teasers and social reels are delivered within 7 to 10 days of the shoot. Full-length cinematic wedding films, commercial color-graded cuts, and high-resolution photo sheets are delivered within 4 to 6 weeks, depending on the scale of post-production.
+            </p>
+          </div>
+        </div>
+
+        <!-- Accordion Item 4 -->
+        <div class="faq-item glass-panel border border-white/5 rounded-lg overflow-hidden transition-all duration-300">
+          <button class="faq-btn w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none">
+            <span class="font-cinzel text-xs sm:text-sm text-white font-bold tracking-wide">Do you offer customization for shoots?</span>
+            <span class="faq-icon text-luxuryGold text-xs transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+          </button>
+          <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+            <p class="px-6 pb-5 font-poppins text-xs text-white/60 leading-relaxed">
+              Absolutely. We believe no two stories are identical. Every campaign, wedding, and portfolio is custom budgeted and tailored based on locations, editing scope, camera requirements, drone usage, and duration of coverage. Contact us to receive a personalized quote.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- Contact & Booking Section -->
+  <section id="contact" class="relative py-24 lg:py-36 px-6 lg:px-16 bg-[#090909] border-t border-white/5">
+    
+    <!-- Background glows -->
+    <div class="aurora-bg top-[10%] left-[5%]"></div>
+    <div class="aurora-bg bottom-[10%] right-[10%]"></div>
+
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Section Title -->
+      <div class="text-center mb-20">
+        <h4 class="text-luxuryGold font-cinzel text-xs tracking-[0.25em] mb-4">Get In Touch</h4>
+        <h2 class="font-cinzel text-3xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-white">Book A Cinematic Shoot</h2>
+        <div class="w-24 h-[1px] bg-luxuryGold mx-auto mt-6"></div>
+      </div>
+
+      <!-- Main Layout Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+        
+        <!-- Left 5 Cols: Contact Details Card -->
+        <div class="lg:col-span-5 glass-panel p-8 md:p-10 border border-white/5 rounded-xl flex flex-col justify-between h-full">
+          <div>
+            <h3 class="font-cinzel text-base font-bold text-white tracking-widestHeader mb-8">Daksh Shah</h3>
+            
+            <div class="space-y-8">
+              
+              <!-- Call Item -->
+              <div class="flex items-start space-x-4">
+                <div class="text-luxuryGold text-sm mt-1"><i class="fa-solid fa-phone"></i></div>
+                <div>
+                  <h4 class="font-cinzel text-[10px] text-white/40 tracking-widestHeader">Call / Inquiry</h4>
+                  <a href="tel:+918146486537" class="font-poppins text-xs text-white hover:text-luxuryGold transition-colors mt-1 block font-medium">+91 81464 86537</a>
+                </div>
+              </div>
+
+              <!-- Email Item -->
+              <div class="flex items-start space-x-4">
+                <div class="text-luxuryGold text-sm mt-1"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <h4 class="font-cinzel text-[10px] text-white/40 tracking-widestHeader">Email Inquiries</h4>
+                  <a href="mailto:shahproductions61@gmail.com" class="font-poppins text-xs text-white hover:text-luxuryGold transition-colors mt-1 block font-medium">shahproductions61@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Location Item -->
+              <div class="flex items-start space-x-4">
+                <div class="text-luxuryGold text-sm mt-1"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <h4 class="font-cinzel text-[10px] text-white/40 tracking-widestHeader">Main Studio</h4>
+                  <p class="font-poppins text-xs text-white mt-1 leading-relaxed font-light">Chandigarh, Punjab/Haryana, India <br><span class="text-luxuryGold/60">Serving PAN India</span></p>
+                </div>
+              </div>
+
+              <!-- Hours Item -->
+              <div class="flex items-start space-x-4">
+                <div class="text-luxuryGold text-sm mt-1"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <h4 class="font-cinzel text-[10px] text-white/40 tracking-widestHeader">Working Hours</h4>
+                  <p class="font-poppins text-xs text-white mt-1 font-light">Monday &ndash; Sunday <br>9:00 AM &ndash; 8:00 PM (IST)</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Buttons & Social Links -->
+          <div class="mt-12 border-t border-white/5 pt-8">
+            <div class="flex flex-wrap gap-4 mb-6">
+              <a href="https://wa.me/918146486537" target="_blank" class="flex-1 flex items-center justify-center space-x-2 bg-emerald-600/10 hover:bg-emerald-600 border border-emerald-600/30 text-white font-cinzel text-[10px] tracking-widestHeader py-2.5 rounded-lg transition-colors">
+                <i class="fa-brands fa-whatsapp text-xs"></i> <span>WHATSAPP</span>
+              </a>
+              <a href="tel:+918146486537" class="flex-1 flex items-center justify-center space-x-2 bg-luxuryGold/10 hover:bg-luxuryGold border border-luxuryGold/30 text-white hover:text-black font-cinzel text-[10px] tracking-widestHeader py-2.5 rounded-lg transition-all">
+                <i class="fa-solid fa-phone text-xs"></i> <span>CALL</span>
+              </a>
+            </div>
+
+            <div class="flex space-x-4 justify-center">
+              <a href="https://instagram.com/" target="_blank" class="w-8 h-8 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/60 hover:text-luxuryGold transition-colors"><i class="fa-brands fa-instagram text-xs"></i></a>
+              <a href="https://youtube.com/" target="_blank" class="w-8 h-8 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/60 hover:text-luxuryGold transition-colors"><i class="fa-brands fa-youtube text-xs"></i></a>
+              <a href="mailto:shahproductions61@gmail.com" class="w-8 h-8 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/60 hover:text-luxuryGold transition-colors"><i class="fa-solid fa-envelope text-xs"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right 7 Cols: Contact Form & Map -->
+        <div class="lg:col-span-7 flex flex-col justify-between space-y-8">
+          
+          <!-- Booking Form -->
+          <form id="booking-form" class="glass-panel p-8 border border-white/5 rounded-xl space-y-6">
+            <h3 class="font-cinzel text-xs text-luxuryGold tracking-widestHeader uppercase font-bold mb-4">Request a Quote</h3>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Name -->
+              <div class="relative">
+                <input type="text" id="form-name" required class="peer w-full bg-white/5 border border-white/10 focus:border-luxuryGold rounded-lg px-4 py-3 text-xs text-white placeholder-transparent focus:outline-none transition-colors">
+                <label for="form-name" class="absolute left-4 top-3 text-[10px] text-white/40 tracking-wider transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3.5 peer-focus:top-1 peer-focus:text-[9px] peer-focus:text-luxuryGold">YOUR NAME</label>
+              </div>
+              <!-- Phone -->
+              <div class="relative">
+                <input type="tel" id="form-phone" required class="peer w-full bg-white/5 border border-white/10 focus:border-luxuryGold rounded-lg px-4 py-3 text-xs text-white placeholder-transparent focus:outline-none transition-colors">
+                <label for="form-phone" class="absolute left-4 top-3 text-[10px] text-white/40 tracking-wider transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3.5 peer-focus:top-1 peer-focus:text-[9px] peer-focus:text-luxuryGold">PHONE NUMBER</label>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <!-- Email -->
+              <div class="relative">
+                <input type="email" id="form-email" required class="peer w-full bg-white/5 border border-white/10 focus:border-luxuryGold rounded-lg px-4 py-3 text-xs text-white placeholder-transparent focus:outline-none transition-colors">
+                <label for="form-email" class="absolute left-4 top-3 text-[10px] text-white/40 tracking-wider transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3.5 peer-focus:top-1 peer-focus:text-[9px] peer-focus:text-luxuryGold">EMAIL ADDRESS</label>
+              </div>
+              <!-- Service Type -->
+              <div class="relative">
+                <select id="form-service" required class="w-full bg-white/5 border border-white/10 focus:border-luxuryGold rounded-lg px-4 py-3 text-xs text-white/70 focus:outline-none transition-colors">
+                  <option class="bg-luxuryBg" value="" disabled selected>SELECT SERVICE</option>
+                  <option class="bg-luxuryBg" value="wedding-photo">Wedding Photography</option>
+                  <option class="bg-luxuryBg" value="wedding-film">Wedding Cinematic Films</option>
+                  <option class="bg-luxuryBg" value="fashion">Fashion & Lifestyle Shoot</option>
+                  <option class="bg-luxuryBg" value="corporate">Corporate Film / Ad</option>
+                  <option class="bg-luxuryBg" value="post-production">Post Production / Editing</option>
+                  <option class="bg-luxuryBg" value="other">Other Creative Project</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Message -->
+            <div class="relative">
+              <textarea id="form-message" rows="4" required class="peer w-full bg-white/5 border border-white/10 focus:border-luxuryGold rounded-lg px-4 py-3 text-xs text-white placeholder-transparent focus:outline-none transition-colors resize-none"></textarea>
+              <label for="form-message" class="absolute left-4 top-3 text-[10px] text-white/40 tracking-wider transition-all peer-placeholder-shown:text-xs peer-placeholder-shown:top-3.5 peer-focus:top-1 peer-focus:text-[9px] peer-focus:text-luxuryGold">PROJECT DETAILS / EVENT DATE</label>
+            </div>
+
+            <button type="submit" class="w-full bg-luxuryGold hover:bg-white text-black font-cinzel text-xs tracking-widestHeader font-bold py-3.5 rounded-lg transition-colors">
+              SUBMIT INQUIRY
+            </button>
+            <div id="form-status" class="hidden text-center text-xs text-luxuryGold mt-2"></div>
+          </form>
+
+          <!-- Interactive Google Maps Frame -->
+          <div class="w-full h-48 rounded-xl overflow-hidden border border-white/5 relative shadow-inner">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.0291295328!2d76.69348821034031!3d30.73506264426569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff90f907e0d9b5!2sChandigarh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.9) contrast(1.2);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section Divider Glow -->
+  <div class="w-full h-[1px] bg-gradient-to-r from-transparent via-luxuryGold/20 to-transparent"></div>
+
+  <!-- ULTRA-PREMIUM LUXURY FOOTER (DARK THEME) -->
+  <footer id="luxury-footer" class="bg-luxuryFooterBg py-24 px-6 lg:px-16 relative overflow-hidden">
+    
+    <!-- Premium Animated Gold Top Border -->
+    <div class="footer-top-border absolute top-0 left-0"></div>
+
+    <!-- Soft moving background particles inside footer -->
+    <canvas id="footer-particles-canvas" class="absolute inset-0 pointer-events-none z-10 opacity-30"></canvas>
+
+    <!-- Fine Gold Light Ray Gradient Background -->
+    <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-gradient-to-br from-luxuryGold/5 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto relative z-20">
+      
+      <!-- Top CTA Header: let's create something extraordinary -->
+      <div class="text-center mb-20 flex flex-col items-center">
+        <h3 class="font-cinzel text-xl sm:text-2xl lg:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-luxuryGold via-luxuryGoldHover to-white tracking-widestHeader mb-4">Let's Create Something Extraordinary</h3>
+        <p class="font-poppins text-xs text-white/50 tracking-wider font-light">Contact our studio to capture your legacy in timeless cinematic clarity.</p>
+        <div class="w-20 h-[1px] bg-luxuryGold/40 mt-6"></div>
+      </div>
+
+      <!-- Top Row: Main Footer Content Columns -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 items-start pb-16 border-b border-white/5">
+        
+        <!-- Col 1: Brand Info (4/12 width) -->
+        <div class="lg:col-span-4 md:col-span-6 flex flex-col space-y-6">
+          <a href="#hero" class="flex flex-col select-none max-w-max group">
+            <span class="font-cinzel text-3xl font-black tracking-widestLogo text-luxuryGold group-hover:text-white transition-colors duration-300">SHAH</span>
+            <span class="font-poppins text-[9px] tracking-[0.55em] text-white/60 -mt-1 group-hover:text-luxuryGold transition-colors duration-300">PRODUCTIONS</span>
+          </a>
+          <p class="font-poppins text-xs text-white/50 leading-relaxed font-light max-w-md">
+            We are filmmakers and visual storytellers crafting high-end, cinematic experiences. Based in Chandigarh and traveling PAN India to build premium memories that transcend time.
+          </p>
+          
+          <!-- Social Icons with custom magnetic hover animations -->
+          <div class="flex items-center space-x-4 pt-2">
+            <a href="https://instagram.com/" target="_blank" class="w-9 h-9 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/50 hover:text-luxuryGold transition-colors duration-300">
+              <i class="fa-brands fa-instagram text-sm"></i>
+            </a>
+            <a href="https://youtube.com/" target="_blank" class="w-9 h-9 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/50 hover:text-luxuryGold transition-colors duration-300">
+              <i class="fa-brands fa-youtube text-sm"></i>
+            </a>
+            <a href="https://wa.me/918146486537" target="_blank" class="w-9 h-9 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/50 hover:text-luxuryGold transition-colors duration-300">
+              <i class="fa-brands fa-whatsapp text-sm"></i>
+            </a>
+            <a href="mailto:shahproductions61@gmail.com" class="w-9 h-9 rounded-full border border-white/10 hover:border-luxuryGold flex items-center justify-center text-white/50 hover:text-luxuryGold transition-colors duration-300">
+              <i class="fa-solid fa-envelope text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Services Quick Links (3/12 width) -->
+        <div class="lg:col-span-3 md:col-span-6 flex flex-col space-y-4 font-cinzel text-xs tracking-widestHeader">
+          <h4 class="text-white font-bold tracking-wide text-[11px] uppercase border-b border-white/5 pb-2">Creative Services</h4>
+          <div class="flex flex-col space-y-3 font-poppins text-xs font-light text-white/60">
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Wedding Cinema</a>
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Luxury Pre-Weddings</a>
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Fashion Lookbooks</a>
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Corporate Brand Ads</a>
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Color Grading Suite</a>
+            <a href="#services" class="hover:text-luxuryGold transition-colors duration-300">Drone 4K Aerials</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Studio Quick Links (2/12 width) -->
+        <div class="lg:col-span-2 md:col-span-6 flex flex-col space-y-4 font-cinzel text-xs tracking-widestHeader">
+          <h4 class="text-white font-bold tracking-wide text-[11px] uppercase border-b border-white/5 pb-2">Explore Studio</h4>
+          <div class="flex flex-col space-y-3 font-poppins text-xs font-light text-white/60">
+            <a href="#about" class="hover:text-luxuryGold transition-colors duration-300">Daksh Shah Vision</a>
+            <a href="#portfolio" class="hover:text-luxuryGold transition-colors duration-300">Visual Portfolio</a>
+            <a href="#showreel" class="hover:text-luxuryGold transition-colors duration-300">Studio Showreel</a>
+            <a href="#testimonials" class="hover:text-luxuryGold transition-colors duration-300">Client Reviews</a>
+            <a href="#faq" class="hover:text-luxuryGold transition-colors duration-300">FAQs & Inquiries</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact details (3/12 width) -->
+        <div class="lg:col-span-3 md:col-span-6 flex flex-col space-y-4 font-cinzel text-xs tracking-widestHeader">
+          <h4 class="text-white font-bold tracking-wide text-[11px] uppercase border-b border-white/5 pb-2">Direct Contact</h4>
+          <div class="flex flex-col space-y-4 font-poppins text-xs font-light text-white/60">
+            <div>
+              <span class="block text-[10px] tracking-widestHeader uppercase text-white/40 mb-1">CALL US</span>
+              <a href="tel:+918146486537" class="hover:text-luxuryGold text-white font-medium transition-colors whitespace-nowrap">+91 81464 86537</a>
+            </div>
+            <div>
+              <span class="block text-[10px] tracking-widestHeader uppercase text-white/40 mb-1">EMAIL</span>
+              <a href="mailto:shahproductions61@gmail.com" class="hover:text-luxuryGold text-white font-medium transition-colors whitespace-nowrap">shahproductions61@gmail.com</a>
+            </div>
+            <div>
+              <span class="block text-[10px] tracking-widestHeader uppercase text-white/40 mb-1">LOCATE</span>
+              <span class="text-white font-medium block whitespace-nowrap">Chandigarh, Punjab/Haryana</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mid Row: Luxury Newsletter Subscription Card -->
+      <div class="py-12 border-b border-white/5 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="max-w-md text-center lg:text-left">
+          <h4 class="font-cinzel text-sm text-white font-bold tracking-widestHeader">Subscribe to Gilded Stories</h4>
+          <p class="font-poppins text-xs text-white/50 font-light mt-1">Receive premium session availability, cinematic tips, and creative lookbooks directly.</p>
+        </div>
+        
+        <form id="newsletter-form" class="flex w-full lg:w-[450px] items-center bg-white/5 border border-white/10 hover:border-luxuryGold/40 p-1.5 rounded-full transition-all duration-300 shadow-sm">
+          <input type="email" required placeholder="Enter Email Address" class="w-full bg-transparent px-4 py-2 text-xs text-white focus:outline-none placeholder-white/35 font-poppins">
+          <button type="submit" class="bg-luxuryGold hover:bg-white text-black font-cinzel text-[10px] tracking-widestHeader font-bold px-6 py-2.5 rounded-full transition-colors duration-300">
+            SUBSCRIBE
+          </button>
+        </form>
+      </div>
+
+      <!-- Bottom Row: Outlined Running Marquee Text -->
+      <div class="relative w-full overflow-hidden py-8 pointer-events-none select-none flex items-center justify-center">
+        <div class="footer-marquee">SHAH PRODUCTIONS</div>
+      </div>
+
+      <!-- Copyright Subfooter -->
+      <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0">
+        <p class="font-poppins text-[10px] text-white/30 tracking-wider">
+          &copy; 2026 Shah Productions. All Rights Reserved. Crafted for legacies.
+        </p>
+        <div class="flex space-x-6 font-cinzel text-[9px] tracking-widestHeader text-white/30">
+          <a href="#faq" class="hover:text-luxuryGold transition-colors">Terms of Service</a>
+          <a href="#faq" class="hover:text-luxuryGold transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Floating Widgets (WhatsApp & Back-to-Top) -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-4">
+    <!-- Back to Top Button -->
+    <button id="back-to-top-btn" class="w-12 h-12 rounded-full border border-luxuryGold/30 bg-[#0B0B0B]/85 backdrop-blur-md text-luxuryGold flex items-center justify-center hover:bg-luxuryGold hover:text-black hover:border-luxuryGold transition-all duration-300 shadow-xl opacity-0 translate-y-10 pointer-events-none">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/918146486537" target="_blank" class="w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center shadow-xl hover:scale-110 transition-transform duration-300 relative group">
+      <i class="fa-brands fa-whatsapp text-xl"></i>
+      <span class="absolute right-14 bg-[#0B0B0B] border border-luxuryGold/20 text-luxuryGold text-[10px] tracking-widestHeader px-3 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">WHATSAPP US</span>
+    </a>
+  </div>
+
+  <!-- --- Libraries & Scripts --- -->
+  <!-- Three.js Core CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.19/bundled/lenis.min.js"></script>
+  
+  <!-- Swiper.js Slider -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  
+  <!-- Main Script -->
+  <script src="app.js"></script>
+</body>
+</html>
