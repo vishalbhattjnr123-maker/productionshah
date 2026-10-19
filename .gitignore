@@ -23,6 +23,7 @@
 # misc
 .DS_Store
 *.pem
+*.docx
 /raw_source_media/
 
 # debug
