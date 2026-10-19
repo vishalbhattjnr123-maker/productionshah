@@ -7,7 +7,7 @@ const serif = "'Cormorant Garamond', Georgia, serif"
 const sans = "'Manrope', system-ui, sans-serif"
 
 const NAV_LINKS = ['Home', 'Portfolio', 'Weddings', 'Films', 'About', 'Journal', 'Contact', 'Privacy Policy']
-const HREFS = ['#home', '#portfolio', '#services', '#films', '#about', '#journal', '#enquiry', '/privacy']
+const HREFS = ['#home', '#portfolio', '#services', '#films', '#about', '#journal', '#enquiry', '/privacy/']
 
 const SOCIALS = [
     {
@@ -99,7 +99,12 @@ export default function Footer() {
                                 {NAV_LINKS.map((label, i) => (
                                     <li key={label}>
                                         <a href={HREFS[i]}
-                                            onClick={e => { e.preventDefault(); go(HREFS[i]) }}
+                                            onClick={e => {
+                                                if (HREFS[i].startsWith('#')) {
+                                                    e.preventDefault()
+                                                    go(HREFS[i])
+                                                }
+                                            }}
                                             style={{ fontFamily: sans, fontSize: '0.72rem', color: C.muted, textDecoration: 'none', letterSpacing: '0.06em', transition: 'color 0.3s' }}
                                             onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = C.gold}
                                             onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = C.muted}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://shahscenes.com'),
   title: 'SHAH SCENES — Luxury Wedding & Portrait Photography',
   description:
     'SHAH SCENES is a premium wedding photography and cinematic films studio. We document weddings, fine art portraits, destination celebrations, and bridal portraits with artistry and intention.',

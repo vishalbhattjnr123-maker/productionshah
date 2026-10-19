@@ -9,9 +9,20 @@ import imageio_ffmpeg
 pillow_heif.register_heif_opener()
 
 BASE_DIR = r"d:\All site\shah\public"
+RAW_DIR = r"d:\All site\shah\raw_source_media"
 OUT_IMG_DIR = os.path.join(BASE_DIR, "media", "images")
 OUT_VID_DIR = os.path.join(BASE_DIR, "media", "videos")
 OUT_THUMB_DIR = os.path.join(BASE_DIR, "media", "thumbnails")
+
+def find_source(rel_path):
+    for candidate in [
+        os.path.join(RAW_DIR, rel_path),
+        os.path.join(RAW_DIR, "root_originals", rel_path),
+        os.path.join(BASE_DIR, rel_path),
+    ]:
+        if os.path.exists(candidate):
+            return candidate
+    return None
 
 os.makedirs(OUT_IMG_DIR, exist_ok=True)
 os.makedirs(OUT_VID_DIR, exist_ok=True)
@@ -135,7 +146,7 @@ master_images = []
 master_videos = []
 
 # --- A. NEW WEDDING PHOTOS ---
-weeding_dir = os.path.join(BASE_DIR, "weeding")
+weeding_dir = os.path.join(RAW_DIR, "weeding") if os.path.exists(os.path.join(RAW_DIR, "weeding")) else os.path.join(BASE_DIR, "weeding")
 if os.path.exists(weeding_dir):
     idx = 1
     for f in sorted(os.listdir(weeding_dir)):
@@ -178,14 +189,14 @@ root_images = [
     ("1 (11).png", "story-10", "Dusk to Dawn Celebration", "Destination", "4/5"),
 ]
 for fn, slug, title, cat, aspect in root_images:
-    fp = os.path.join(BASE_DIR, fn)
-    if os.path.exists(fp):
+    fp = find_source(fn)
+    if fp and os.path.exists(fp):
         item = optimize_image(fp, slug, title, cat, aspect)
         if item:
             master_images.append(item)
 
 # --- C. EVENT PHOTOS ---
-event_dir = os.path.join(BASE_DIR, "event")
+event_dir = os.path.join(RAW_DIR, "event") if os.path.exists(os.path.join(RAW_DIR, "event")) else os.path.join(BASE_DIR, "event")
 if os.path.exists(event_dir):
     idx = 1
     for f in sorted(os.listdir(event_dir)):
@@ -228,14 +239,14 @@ root_vids = [
     ("Video-557.mp4", "film-11", "Pre-Wedding Moments", "Gentle laughter before the vows", "0:14", "Cinematic Reels"),
 ]
 for fn, slug, t, d, dur, cat in root_vids:
-    fp = os.path.join(BASE_DIR, fn)
-    if os.path.exists(fp):
+    fp = find_source(fn)
+    if fp and os.path.exists(fp):
         item = optimize_video(fp, slug, t, d, dur, cat)
         if item:
             master_videos.append(item)
 
 # --- F. EVENT VIDEOS ---
-event_vid_dir = os.path.join(BASE_DIR, "event video")
+event_vid_dir = os.path.join(RAW_DIR, "event video") if os.path.exists(os.path.join(RAW_DIR, "event video")) else os.path.join(BASE_DIR, "event video")
 if os.path.exists(event_vid_dir):
     e_vids = [
         ("MAX MUSIC SCHOOL AWARDS .mp4", "event-film-01", "Max Music School Awards Night", "Gala award ceremony highlights & live performances", "0:40"),
@@ -251,7 +262,7 @@ if os.path.exists(event_vid_dir):
                 master_videos.append(item)
 
 # --- G. FOOD & COMMERCIAL VIDEOS ---
-food_dir = os.path.join(BASE_DIR, "food")
+food_dir = os.path.join(RAW_DIR, "food") if os.path.exists(os.path.join(RAW_DIR, "food")) else os.path.join(BASE_DIR, "food")
 if os.path.exists(food_dir):
     f_vids = [
         ("SAVORA CAFE.mp4", "food-film-01", "Savora Cafe Experience", "Artisan brew, warm ambiance, and sensory culinary delight", "0:22"),

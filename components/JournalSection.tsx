@@ -1,17 +1,11 @@
 'use client'
 
 import { useFadeUp, fadeStyle } from '@/hooks/useFadeUp'
+import { ARTICLES } from '@/lib/journalData'
 
 const C = { obsidian: '#030303', bronze: '#4A2C1D', gold: '#C6A15B', champagne: '#E8C982', ivory: '#EDE2D0', muted: '#B8AA98' }
 const serif = "'Cormorant Garamond', Georgia, serif"
 const sans = "'Manrope', system-ui, sans-serif"
-
-const ARTICLES = [
-    { id: 1, cat: 'Guide', title: 'How to Choose Your Wedding Photographer', date: 'September 2024', slug: 'how-to-choose-wedding-photographer', image: '/media/images/wedding-moment-01.webp' },
-    { id: 2, cat: 'Planning', title: 'A Guide to Planning Your Intimate Couple Session', date: 'August 2024', slug: 'couple-session-guide', image: '/media/images/wedding-moment-03.webp' },
-    { id: 3, cat: 'Timeline', title: 'Wedding Photography Timeline: A Complete Guide', date: 'July 2024', slug: 'wedding-photography-timeline', image: '/media/images/cinematic-landscape-01.webp' },
-    { id: 4, cat: 'Destination', title: 'Destination Wedding Photography Ideas', date: 'June 2024', slug: 'destination-wedding-photography-ideas', image: '/media/images/story-07.webp' },
-]
 
 export default function JournalSection() {
     const { ref, visible } = useFadeUp()
@@ -30,7 +24,7 @@ export default function JournalSection() {
                             From the journal.
                         </h2>
                     </div>
-                    <a href="#" style={{ ...fadeStyle(visible, 0.12), fontFamily: sans, fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.gold, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
+                    <a href="/journal/" style={{ ...fadeStyle(visible, 0.12), fontFamily: sans, fontSize: '0.6rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.gold, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 8 }}
                         onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = C.champagne}
                         onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = C.gold}
                     >
@@ -42,7 +36,11 @@ export default function JournalSection() {
                 {/* Grid */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 32 }}>
                     {ARTICLES.map((a, i) => (
-                        <article key={a.id} style={{ ...fadeStyle(visible, 0.14 + i * 0.07), cursor: 'pointer' }}>
+                        <article
+                            key={a.id}
+                            style={{ ...fadeStyle(visible, 0.14 + i * 0.07), cursor: 'pointer' }}
+                            onClick={() => { window.location.href = `/journal/${a.slug}/` }}
+                        >
                             <div className="zoom-wrap" style={{ aspectRatio: '4/3', marginBottom: 18, overflow: 'hidden', border: `1px solid ${C.bronze}` }}>
                                 <img
                                     src={a.image}
@@ -60,7 +58,8 @@ export default function JournalSection() {
                             >
                                 {a.title}
                             </h3>
-                            <a href={`/journal/${a.slug}`}
+                            <a href={`/journal/${a.slug}/`}
+                                onClick={e => e.stopPropagation()}
                                 style={{ fontFamily: sans, fontSize: '0.58rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: C.gold, textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: 7, transition: 'color 0.3s' }}
                                 onMouseEnter={e => (e.currentTarget as HTMLElement).style.color = C.champagne}
                                 onMouseLeave={e => (e.currentTarget as HTMLElement).style.color = C.gold}
