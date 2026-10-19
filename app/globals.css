@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030303;
+  color: #EDE2D0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(198, 161, 91, 0.18);
+  color: #E8C982;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A2C1D;
+}
+
+:focus-visible {
+  outline: 1px solid #C6A15B;
+  outline-offset: 3px;
+}
+
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+/* Nav hover underline */
+.nav-link {
+  position: relative;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #B8AA98;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #E8C982;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #EDE2D0;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Scroll indicator pulse */
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scaleY(0.3);
+    opacity: 0.4;
+  }
+}
+
+.scroll-line {
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* Fade up on scroll */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image hover zoom */
+.zoom-wrap {
+  overflow: hidden;
+}
+
+.zoom-wrap img,
+.zoom-wrap .ph {
+  transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.zoom-wrap:hover img,
+.zoom-wrap:hover .ph {
+  transform: scale(1.05);
+}
+
+/* Portfolio card hover */
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-overlay {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* ── Form Inputs & Browser Autofill Fix ────────────────────── */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #17110D inset !important;
+  box-shadow: 0 0 0 1000px #17110D inset !important;
+  -webkit-text-fill-color: #EDE2D0 !important;
+  caret-color: #C6A15B !important;
+  color: #EDE2D0 !important;
+  font-family: 'Manrope', system-ui, sans-serif !important;
+  transition: background-color 50000s ease-in-out 0s !important;
+}
+
+input:autofill,
+textarea:autofill,
+select:autofill {
+  box-shadow: 0 0 0 1000px #17110D inset !important;
+  color: #EDE2D0 !important;
+  -webkit-text-fill-color: #EDE2D0 !important;
+}
+
+/* Dark color scheme for native pickers */
+input[type="date"] {
+  color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.8) sepia(0.6) saturate(3) hue-rotate(5deg);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Form input placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #8C7B6B;
+  opacity: 0.7;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,898 @@
+// Complete Generated Media Manifest
+export interface MediaImage {
+  id: string;
+  orig: string;
+  src: string;
+  title: string;
+  cat: string;
+  aspect: string;
+  width: number;
+  height: number;
+}
+
+export interface MediaVideo {
+  id: string;
+  orig: string;
+  src: string;
+  poster: string;
+  title: string;
+  desc: string;
+  dur: string;
+  cat: string;
+}
+
+export const MEDIA_IMAGES: MediaImage[] = [
+  {
+    "id": "wedding-story-01",
+    "orig": "3584abb75ca274080442ae7764865838.jpg.jpeg",
+    "src": "/media/images/wedding-story-01.webp",
+    "title": "Sacred Vows & Rituals 1",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 736,
+    "height": 981
+  },
+  {
+    "id": "event-moment-01",
+    "orig": "DSC02936.JPG",
+    "src": "/media/images/event-moment-01.webp",
+    "title": "Grand Gala & Award Moments 1",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "hero-portrait",
+    "orig": "IMG_0289.JPG",
+    "src": "/media/images/hero-portrait.webp",
+    "title": "Timeless Wedding Portrait",
+    "cat": "Bridal Portrait",
+    "aspect": "3/4",
+    "width": 1350,
+    "height": 1800
+  },
+  {
+    "id": "editorial-portrait-01",
+    "orig": "dee63bf473ac8a52183ea48aac4be2d3.jpg.jpeg",
+    "src": "/media/images/wedding-story-07.webp",
+    "title": "Royal Heritage Couture",
+    "cat": "Editorial",
+    "aspect": "2/3",
+    "width": 736,
+    "height": 1288
+  },
+  {
+    "id": "cinematic-landscape-01",
+    "orig": "IMG_4680.HEIC",
+    "src": "/media/images/cinematic-landscape-01.webp",
+    "title": "Vows by the Horizon",
+    "cat": "Destination",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1079
+  },
+  {
+    "id": "wedding-moment-03",
+    "orig": "IMG_20260718_130055.jpg",
+    "src": "/media/images/wedding-moment-03.webp",
+    "title": "Golden Hour Radiance",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1350,
+    "height": 1800
+  },
+  {
+    "id": "wedding-story-02",
+    "orig": "43f1d03d262bc9ad9dea36d281157bce.jpg.jpeg",
+    "src": "/media/images/wedding-story-02.webp",
+    "title": "Sacred Vows & Rituals 2",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 736,
+    "height": 978
+  },
+  {
+    "id": "event-moment-02",
+    "orig": "DSC03012.JPG",
+    "src": "/media/images/event-moment-02.webp",
+    "title": "Grand Gala & Award Moments 2",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "monochrome-03",
+    "orig": "Picsart_26-07-01_17-04-19-580.jpg",
+    "src": "/media/images/monochrome-03.webp",
+    "title": "Grace in Stillness",
+    "cat": "Bridal Portrait",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "monochrome-01",
+    "orig": "Picsart_26-07-01_17-02-23-648.jpg",
+    "src": "/media/images/monochrome-01.webp",
+    "title": "Soulful Silhouettes I",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "cinematic-landscape-02",
+    "orig": "IMG_4685.HEIC",
+    "src": "/media/images/cinematic-landscape-02.webp",
+    "title": "Twilight Serenade",
+    "cat": "Destination",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1080
+  },
+  {
+    "id": "monochrome-04",
+    "orig": "Picsart_26-07-01_17-05-11-379.jpg",
+    "src": "/media/images/monochrome-04.webp",
+    "title": "Whispers of Forever",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "wedding-story-03",
+    "orig": "55bb27790893c4c7dc4499806a76d4d3.jpg.jpeg",
+    "src": "/media/images/wedding-story-03.webp",
+    "title": "Sacred Vows & Rituals 3",
+    "cat": "Wedding",
+    "aspect": "2/3",
+    "width": 683,
+    "height": 1024
+  },
+  {
+    "id": "event-moment-03",
+    "orig": "DSC03024.JPG",
+    "src": "/media/images/event-moment-03.webp",
+    "title": "Grand Gala & Award Moments 3",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "monochrome-09",
+    "orig": "Picsart_26-07-01_17-32-28-101.jpg",
+    "src": "/media/images/monochrome-09.webp",
+    "title": "Candid Majesty",
+    "cat": "Bridal Portrait",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "monochrome-02",
+    "orig": "Picsart_26-07-01_17-03-05-326.jpg",
+    "src": "/media/images/monochrome-02.webp",
+    "title": "Soulful Silhouettes II",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "story-07",
+    "orig": "1 (8).png",
+    "src": "/media/images/story-07.webp",
+    "title": "Royal Heritage",
+    "cat": "Destination",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "story-01",
+    "orig": "1 (1).png",
+    "src": "/media/images/story-01.webp",
+    "title": "Velvet Night Prelude",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "wedding-story-04",
+    "orig": "6a1110b4f901a72c2ffa7cf5bd43bedc.jpg.jpeg",
+    "src": "/media/images/wedding-story-04.webp",
+    "title": "Sacred Vows & Rituals 4",
+    "cat": "Wedding",
+    "aspect": "2/3",
+    "width": 735,
+    "height": 1103
+  },
+  {
+    "id": "event-moment-04",
+    "orig": "DSC03035.JPG",
+    "src": "/media/images/event-moment-04.webp",
+    "title": "Grand Gala & Award Moments 4",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "story-09",
+    "orig": "1 (10).png",
+    "src": "/media/images/story-09.webp",
+    "title": "Golden Legacy",
+    "cat": "Bridal Portrait",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "monochrome-05",
+    "orig": "Picsart_26-07-01_17-05-49-520.jpg",
+    "src": "/media/images/monochrome-05.webp",
+    "title": "Poetry in Motion",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "story-10",
+    "orig": "1 (11).png",
+    "src": "/media/images/story-10.webp",
+    "title": "Dusk to Dawn Celebration",
+    "cat": "Destination",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "wedding-story-05",
+    "orig": "b12054245bf1269507d63ca11d9f518a.jpg.jpeg",
+    "src": "/media/images/wedding-story-05.webp",
+    "title": "Sacred Vows & Rituals 5",
+    "cat": "Wedding",
+    "aspect": "2/3",
+    "width": 736,
+    "height": 1103
+  },
+  {
+    "id": "event-moment-05",
+    "orig": "DSC03070.JPG",
+    "src": "/media/images/event-moment-05.webp",
+    "title": "Grand Gala & Award Moments 5",
+    "cat": "Events",
+    "aspect": "2/3",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": "monochrome-08",
+    "orig": "Picsart_26-07-01_17-29-03-546.jpg",
+    "src": "/media/images/monochrome-08.webp",
+    "title": "Fleeting Moments",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "wedding-story-06",
+    "orig": "c2f2c2e02314c81ae18b298b52825fd7.jpg.jpeg",
+    "src": "/media/images/wedding-story-06.webp",
+    "title": "Sacred Vows & Rituals 6",
+    "cat": "Wedding",
+    "aspect": "2/3",
+    "width": 736,
+    "height": 1104
+  },
+  {
+    "id": "event-moment-06",
+    "orig": "DSC03071.JPG",
+    "src": "/media/images/event-moment-06.webp",
+    "title": "Grand Gala & Award Moments 6",
+    "cat": "Events",
+    "aspect": "2/3",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": "story-02",
+    "orig": "1 (2).png",
+    "src": "/media/images/story-02.webp",
+    "title": "Gilded Whispers",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "wedding-story-07",
+    "orig": "1 (9).png",
+    "src": "/media/images/story-08.webp",
+    "title": "Vibrant Celebration",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "event-moment-07",
+    "orig": "DSC03077.JPG",
+    "src": "/media/images/event-moment-07.webp",
+    "title": "Grand Gala & Award Moments 7",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "story-03",
+    "orig": "1 (3).png",
+    "src": "/media/images/story-03.webp",
+    "title": "Artistic Composition III",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "wedding-story-08",
+    "orig": "fbbffde653371b03dadcd1c165f5e3a3.jpg.jpeg",
+    "src": "/media/images/wedding-story-08.webp",
+    "title": "Sacred Vows & Rituals 8",
+    "cat": "Wedding",
+    "aspect": "2/3",
+    "width": 736,
+    "height": 1100
+  },
+  {
+    "id": "event-moment-08",
+    "orig": "DSC03172.JPG",
+    "src": "/media/images/event-moment-08.webp",
+    "title": "Grand Gala & Award Moments 8",
+    "cat": "Events",
+    "aspect": "2/3",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": "story-05",
+    "orig": "1 (6).png",
+    "src": "/media/images/story-05.webp",
+    "title": "Lumi\u00e8re & Shadow",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "wedding-moment-01",
+    "orig": "IMG_20260718_125741.jpg",
+    "src": "/media/images/wedding-moment-01.webp",
+    "title": "A Celebration in Udaipur",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1350,
+    "height": 1800
+  },
+  {
+    "id": "event-moment-09",
+    "orig": "DSC03262.JPG",
+    "src": "/media/images/event-moment-09.webp",
+    "title": "Grand Gala & Award Moments 9",
+    "cat": "Events",
+    "aspect": "2/3",
+    "width": 1200,
+    "height": 1800
+  },
+  {
+    "id": "wedding-moment-02",
+    "orig": "IMG_20260718_125847.jpg",
+    "src": "/media/images/wedding-moment-02.webp",
+    "title": "Intimate Wedding Vows",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1350,
+    "height": 1800
+  },
+  {
+    "id": "event-moment-10",
+    "orig": "DSC03278.JPG",
+    "src": "/media/images/event-moment-10.webp",
+    "title": "Grand Gala & Award Moments 10",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "monochrome-06",
+    "orig": "Picsart_26-07-01_17-08-51-882.jpg",
+    "src": "/media/images/monochrome-06.webp",
+    "title": "The Sacred Gaze",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "event-moment-11",
+    "orig": "DSC03279.JPG",
+    "src": "/media/images/event-moment-11.webp",
+    "title": "Grand Gala & Award Moments 11",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "monochrome-07",
+    "orig": "Picsart_26-07-01_17-27-49-001.jpg",
+    "src": "/media/images/monochrome-07.webp",
+    "title": "Eternal Romance",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1353,
+    "height": 1800
+  },
+  {
+    "id": "event-moment-12",
+    "orig": "DSC03354.JPG",
+    "src": "/media/images/event-moment-12.webp",
+    "title": "Grand Gala & Award Moments 12",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "story-04",
+    "orig": "1 (4).png",
+    "src": "/media/images/story-04.webp",
+    "title": "Warm Embrace",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "event-moment-13",
+    "orig": "DSC03356.JPG",
+    "src": "/media/images/event-moment-13.webp",
+    "title": "Grand Gala & Award Moments 13",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "story-06",
+    "orig": "1 (7).png",
+    "src": "/media/images/story-06.webp",
+    "title": "Crimson Splendor",
+    "cat": "Wedding",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "event-moment-14",
+    "orig": "DSC03358.JPG",
+    "src": "/media/images/event-moment-14.webp",
+    "title": "Grand Gala & Award Moments 14",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "story-09",
+    "orig": "1 (10).png",
+    "src": "/media/images/story-09.webp",
+    "title": "Studio Sound Precision",
+    "cat": "Editorial",
+    "aspect": "3/4",
+    "width": 1122,
+    "height": 1402
+  },
+  {
+    "id": "event-moment-15",
+    "orig": "DSC03359.JPG",
+    "src": "/media/images/event-moment-15.webp",
+    "title": "Grand Gala & Award Moments 15",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-16",
+    "orig": "DSC03361.JPG",
+    "src": "/media/images/event-moment-16.webp",
+    "title": "Grand Gala & Award Moments 16",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-17",
+    "orig": "DSC03381.JPG",
+    "src": "/media/images/event-moment-17.webp",
+    "title": "Grand Gala & Award Moments 17",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-18",
+    "orig": "DSC_2026.JPG",
+    "src": "/media/images/event-moment-18.webp",
+    "title": "Grand Gala & Award Moments 18",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-19",
+    "orig": "DSC_2339.JPG",
+    "src": "/media/images/event-moment-19.webp",
+    "title": "Grand Gala & Award Moments 19",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-20",
+    "orig": "DSC_2342.JPG",
+    "src": "/media/images/event-moment-20.webp",
+    "title": "Grand Gala & Award Moments 20",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-21",
+    "orig": "DSC_2495.JPG",
+    "src": "/media/images/event-moment-21.webp",
+    "title": "Grand Gala & Award Moments 21",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-22",
+    "orig": "DSC_2679.JPG",
+    "src": "/media/images/event-moment-22.webp",
+    "title": "Grand Gala & Award Moments 22",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-23",
+    "orig": "DSC_2728.JPG",
+    "src": "/media/images/event-moment-23.webp",
+    "title": "Grand Gala & Award Moments 23",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-24",
+    "orig": "DSC_3090.JPG",
+    "src": "/media/images/event-moment-24.webp",
+    "title": "Grand Gala & Award Moments 24",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-25",
+    "orig": "DSC_3098.JPG",
+    "src": "/media/images/event-moment-25.webp",
+    "title": "Grand Gala & Award Moments 25",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  },
+  {
+    "id": "event-moment-26",
+    "orig": "DSC_3102.JPG",
+    "src": "/media/images/event-moment-26.webp",
+    "title": "Grand Gala & Award Moments 26",
+    "cat": "Events",
+    "aspect": "16/9",
+    "width": 1800,
+    "height": 1200
+  }
+];
+
+export const MEDIA_VIDEOS: MediaVideo[] = [
+  {
+    "id": "new-film-01",
+    "orig": "Video-2828.mp4",
+    "src": "/media/videos/new-film-01.mp4",
+    "poster": "/media/thumbnails/new-film-01-thumb.webp",
+    "title": "Royal Bridal Splendor",
+    "desc": "A regal portraiture film capturing timeless bridal poise and sacred beauty",
+    "dur": "0:37",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "new-film-02",
+    "orig": "Video-45239.mp4",
+    "src": "/media/videos/new-film-02.mp4",
+    "poster": "/media/thumbnails/new-film-02-thumb.webp",
+    "title": "The Grand Mandap Entry",
+    "desc": "An unforgettable walk under blossoms, bathed in golden courtyard light",
+    "dur": "0:37",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "new-film-03",
+    "orig": "VN20261016_120018.mp4",
+    "src": "/media/videos/new-film-03.mp4",
+    "poster": "/media/thumbnails/new-film-03-thumb.webp",
+    "title": "A Garden Odyssey of Love",
+    "desc": "Lush daylight celebration capturing pure joy, movement, and genuine soul",
+    "dur": "1:27",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "wedding-film-01",
+    "orig": "Video-54145.mp4",
+    "src": "/media/videos/wedding-film-01.mp4",
+    "poster": "/media/thumbnails/wedding-film-01-thumb.webp",
+    "title": "The Grand Wedding Symphony",
+    "desc": "A celebration of sacred vows, laughter, and heirloom memories",
+    "dur": "0:48",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "event-film-01",
+    "orig": "MAX MUSIC SCHOOL AWARDS .mp4",
+    "src": "/media/videos/event-film-01.mp4",
+    "poster": "/media/thumbnails/event-film-01-thumb.webp",
+    "title": "Max Music School Awards Night",
+    "desc": "Gala award ceremony highlights & live performances",
+    "dur": "0:40",
+    "cat": "Event Films"
+  },
+  {
+    "id": "film-03",
+    "orig": "petals_pilates_30sec_sequence_reel.mp4",
+    "src": "/media/videos/film-03.mp4",
+    "poster": "/media/thumbnails/film-03-thumb.webp",
+    "title": "Rhythm & Grace",
+    "desc": "A rhythmic sequence captured with precision",
+    "dur": "0:30",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-01",
+    "orig": "SAVORA CAFE.mp4",
+    "src": "/media/videos/food-film-01.mp4",
+    "poster": "/media/thumbnails/food-film-01-thumb.webp",
+    "title": "Savora Cafe Experience",
+    "desc": "Artisan brew, warm ambiance, and sensory culinary delight",
+    "dur": "0:22",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "wedding-film-02",
+    "orig": "Video-59191.mp4",
+    "src": "/media/videos/wedding-film-02.mp4",
+    "poster": "/media/thumbnails/wedding-film-02-thumb.webp",
+    "title": "Golden Hour Vows",
+    "desc": "Intimate rituals and radiant emotions captured in timeless frames",
+    "dur": "0:45",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "event-film-02",
+    "orig": "MAX MUSIC SCHOOL ENTRY  2.mp4",
+    "src": "/media/videos/event-film-02.mp4",
+    "poster": "/media/thumbnails/event-film-02-thumb.webp",
+    "title": "Grand Entry & Stage Arrival",
+    "desc": "Electrifying red carpet walk & audience reception",
+    "dur": "0:45",
+    "cat": "Event Films"
+  },
+  {
+    "id": "film-04",
+    "orig": "Snapchat-986809368.mp4",
+    "src": "/media/videos/film-04.mp4",
+    "poster": "/media/thumbnails/film-04-thumb.webp",
+    "title": "The Golden Glow Reel",
+    "desc": "Pure joy and spontaneous celebration",
+    "dur": "0:19",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-02",
+    "orig": "C2267.MP4",
+    "src": "/media/videos/food-film-02.mp4",
+    "poster": "/media/thumbnails/food-film-02-thumb.webp",
+    "title": "Culinary Craftsmanship I",
+    "desc": "Gourmet plating & culinary perfection in motion",
+    "dur": "0:05",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "wedding-film-03",
+    "orig": "Video-95215.mp4",
+    "src": "/media/videos/wedding-film-03.mp4",
+    "poster": "/media/thumbnails/wedding-film-03-thumb.webp",
+    "title": "Midnight Nuptials & Joy",
+    "desc": "Vibrant celebration of dance, rituals, and family love",
+    "dur": "0:38",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "event-film-03",
+    "orig": "MAX MUSIC SCHOOL FINAL.02.mp4",
+    "src": "/media/videos/event-film-03.mp4",
+    "poster": "/media/thumbnails/event-film-03-thumb.webp",
+    "title": "The Grand Finale Celebration",
+    "desc": "Full cinematic showcase of the musical celebration",
+    "dur": "1:05",
+    "cat": "Event Films"
+  },
+  {
+    "id": "film-06",
+    "orig": "VID-20260619-WA0008.mp4",
+    "src": "/media/videos/film-06.mp4",
+    "poster": "/media/thumbnails/film-06-thumb.webp",
+    "title": "Midnight Revelry",
+    "desc": "Electric energy and late-night celebrations",
+    "dur": "0:25",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-03",
+    "orig": "C2294.MP4",
+    "src": "/media/videos/food-film-03.mp4",
+    "poster": "/media/thumbnails/food-film-03-thumb.webp",
+    "title": "Flavors & Atmosphere II",
+    "desc": "Exquisite cocktails & modern gastronomy experience",
+    "dur": "0:18",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "film-01",
+    "orig": "0928 (2).mp4",
+    "src": "/media/videos/film-01.mp4",
+    "poster": "/media/thumbnails/film-01-thumb.webp",
+    "title": "Symphony of Forever",
+    "desc": "A cinematic tale of timeless love and grandeur",
+    "dur": "0:14",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "event-film-04",
+    "orig": "MAX MUSIC SCHOOL TEASER .mp4",
+    "src": "/media/videos/event-film-04.mp4",
+    "poster": "/media/thumbnails/event-film-04-thumb.webp",
+    "title": "Music School Premiere Teaser",
+    "desc": "High energy cinematic teaser and beats",
+    "dur": "0:26",
+    "cat": "Event Films"
+  },
+  {
+    "id": "film-08",
+    "orig": "VID-20260926-WA0049(3).mp4",
+    "src": "/media/videos/film-08.mp4",
+    "poster": "/media/thumbnails/film-08-thumb.webp",
+    "title": "Fleeting Glimpses",
+    "desc": "Intimate behind-the-scenes glances",
+    "dur": "0:10",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-04",
+    "orig": "C2295.MP4",
+    "src": "/media/videos/food-film-04.mp4",
+    "poster": "/media/thumbnails/food-film-04-thumb.webp",
+    "title": "Art of Taste III",
+    "desc": "Sensory slow-motion gastronomy and hospitality",
+    "dur": "0:16",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "film-02",
+    "orig": "petal & co final.mp4",
+    "src": "/media/videos/film-02.mp4",
+    "poster": "/media/thumbnails/film-02-thumb.webp",
+    "title": "Petal & Co. Signature Reel",
+    "desc": "Signature wedding cinema highlight showcase",
+    "dur": "0:17",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "film-10",
+    "orig": "Video-51630.mp4",
+    "src": "/media/videos/film-10.mp4",
+    "poster": "/media/thumbnails/film-10-thumb.webp",
+    "title": "Celebration in Motion",
+    "desc": "Vibrant colors, dance and togetherness",
+    "dur": "0:35",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-05",
+    "orig": "C2299.MP4",
+    "src": "/media/videos/food-film-05.mp4",
+    "poster": "/media/thumbnails/food-film-05-thumb.webp",
+    "title": "Chef's Signature Cut",
+    "desc": "Precision culinary prep and sizzling textures",
+    "dur": "0:10",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "film-05",
+    "orig": "VID-20260609-WA0000.mp4",
+    "src": "/media/videos/film-05.mp4",
+    "poster": "/media/thumbnails/film-05-thumb.webp",
+    "title": "Intimate Vows & Laughter",
+    "desc": "Unfiltered emotions from the heart of the ceremony",
+    "dur": "0:31",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "film-11",
+    "orig": "Video-557.mp4",
+    "src": "/media/videos/film-11.mp4",
+    "poster": "/media/thumbnails/film-11-thumb.webp",
+    "title": "Intimate Romance Moments",
+    "desc": "Gentle laughter before the vows",
+    "dur": "0:14",
+    "cat": "Cinematic Reels"
+  },
+  {
+    "id": "food-film-06",
+    "orig": "AWARD TEMPLATE.mp4",
+    "src": "/media/videos/food-film-06.mp4",
+    "poster": "/media/thumbnails/food-film-06-thumb.webp",
+    "title": "Brand Award Reel",
+    "desc": "Premium commercial brand presentation showcase",
+    "dur": "0:40",
+    "cat": "Commercial & Food"
+  },
+  {
+    "id": "film-07",
+    "orig": "VID-20260709-WA0000.mp4",
+    "src": "/media/videos/film-07.mp4",
+    "poster": "/media/thumbnails/film-07-thumb.webp",
+    "title": "Royal Procession Story",
+    "desc": "Grandeur and royal elegance in every frame",
+    "dur": "0:42",
+    "cat": "Wedding Films"
+  },
+  {
+    "id": "film-09",
+    "orig": "Video-14870.mp4",
+    "src": "/media/videos/film-09.mp4",
+    "poster": "/media/thumbnails/film-09-thumb.webp",
+    "title": "The First Dance",
+    "desc": "An unforgettable dance under twilight skies",
+    "dur": "0:34",
+    "cat": "Wedding Films"
+  }
+];
